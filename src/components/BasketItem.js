@@ -1,11 +1,11 @@
 import React from "react";
 
-export default function BasketItem({ product, order }) {
+export default function BasketItem({ order }) {
     return (
         <tr>
-            <td>{product.name}</td>
-            <td>{`@ $${product.cost} x ${order.count}`}</td>
-            <td>{product.cost * order.count}</td>
+            <td>{order.name}</td>
+            <td>{`@ $${order.cost} x ${order.count}`}</td>
+            <td>{(order.cost * order.count).toFixed(2)}</td>
         </tr>
     );
 }
