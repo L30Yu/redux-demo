@@ -5,11 +5,9 @@ import BasketItem from "../components/BasketItem"
 
 class Basket extends Component {
   render() {
-    let { basketOrders, products } = this.props;    
+    let { basketOrders, products } = this.props;
     // combine products data with basket order data
     let productOrders = basketOrders.map(order => { return { ...products.find(product => product.id === order.id), count: order.count } });
-    console.log(productOrders);
-
     let subtotal = productOrders.reduce((total, item) => total += item.count * item.price, 0);
     let discount = 0;
     let total = subtotal - discount;
