@@ -8,12 +8,18 @@ export default function BasketItem({ order, updateDiscount }) {
             saved = valideCount * (order.discount.minimum * order.price - order.discount.price);
         }
     }
+
+    let nameDiv = <div>{order.name} <br /> {saved ? order.discount.description : null} </div>;
+
+    let priceDiv = <div>{`@ $${order.price} x ${order.count}`}<br />{saved ? `@ $${(order.discount.price / order.discount.minimum).toFixed(2)}` : null} </div>;
+
+    let countDiv = <div>{(order.price * order.count).toFixed(2)}<br />{saved ? "-"+(saved).toFixed(2) : null} </div>
+
     return (
         <tr>
-            <td>{saved ? <div>{order.name} <br/> {order.discount.description} </div> : <div>{order.name}</div>}</td>
-            <td>{saved ? <div>{`@ $${order.price} x ${order.count}`}<br />{`@ $${(order.discount.price / order.discount.minimum).toFixed(2)}`} </div> 
-                        : <div>{`@ $${order.price} x ${order.count}`}</div>}</td>
-            <td>{saved ? <div>{(order.price * order.count).toFixed(2)}<br />-{(saved).toFixed(2)} </div> : <div>{(order.price * order.count).toFixed(2)}</div>}</td>
+            <td>{nameDiv}</td>
+            <td>{priceDiv}</td>
+            <td>{countDiv}</td>
         </tr>
     );
 }
