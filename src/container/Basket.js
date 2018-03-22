@@ -10,7 +10,7 @@ class Basket extends Component {
     let productOrders = basketOrders.map(order => { return { ...products.find(product => product.id === order.id), count: order.count } });
     console.log(productOrders);
 
-    let subtotal = productOrders.reduce((total, item) => total += item.count * item.cost, 0);
+    let subtotal = productOrders.reduce((total, item) => total += item.count * item.price, 0);
     let discount = 0;
     let total = subtotal - discount;
 
