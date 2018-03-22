@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function BasketItem({ order }) {
+export default function BasketItem({ order, updateDiscount }) {
     let saved = 0;
     if (order.discount) {
         let valideCount = Math.floor(order.count / order.discount.minimum);

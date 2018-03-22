@@ -31,6 +31,12 @@ let defaultProducts = [
       "minimum": 3,      
       "price": 2
     }
+  },
+  {
+    "id": 3,
+    "name": "React Redux",
+    "price": 21.99,
+    "inventory": 10
   }
 ];
 
