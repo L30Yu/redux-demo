@@ -1,0 +1,15 @@
+.borderless td, .borderless th {
+    border: none;
+}
+
+table tr td:last-child {
+    text-align: right;
+}
+
+table thead tr th:last-child {
+    text-align: right;
+}
+
+table input {
+    width: 6em;
+}
