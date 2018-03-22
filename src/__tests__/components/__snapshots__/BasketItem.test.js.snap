@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<tr>
+  <td>
+    <div>
+      test
+       
+      <br />
+       
+       
+    </div>
+  </td>
+  <td>
+    <div>
+      @ $2 x 2
+      <br />
+       
+    </div>
+  </td>
+  <td>
+    <div>
+      4.00
+      <br />
+       
+    </div>
+  </td>
+</tr>
+`;

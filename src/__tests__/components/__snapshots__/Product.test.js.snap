@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<tr
+  style={
+    Object {
+      "padding": "1em 1em",
+    }
+  }
+>
+  <td>
+    test
+  </td>
+  <td>
+    <input
+      className="form-control"
+      id={0}
+      invalide={undefined}
+      name="quantity"
+      onChange={[Function]}
+      placeholder="quantity"
+      type="number"
+      value={1}
+    />
+  </td>
+  <td>
+    <button
+      className="btn btn-primary"
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    >
+      Add
+    </button>
+  </td>
+  <td>
+    <button
+      className="btn btn-danger"
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    >
+      Remove
+    </button>
+  </td>
+</tr>
+`;
